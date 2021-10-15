@@ -9,7 +9,8 @@ post-install_win7.bat
 
 @ECHO OFF
 
-:: Elevation needed (https://stackoverflow.com/questions/7985755/how-to-detect-if-cmd-is-running-as-administrator-has-elevated-privileges)
+:: Elevation needed
+:: https://stackoverflow.com/questions/7985755/how-to-detect-if-cmd-is-running-as-administrator-has-elevated-privileges
 AT > NUL
 IF %ERRORLEVEL% NEQ 0 ECHO Ce script doit etre execute en tant qu'administrateur ! & GOTO QUIT
 
