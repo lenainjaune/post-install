@@ -14,7 +14,7 @@ post-install_win7.bat
 AT > NUL
 IF %ERRORLEVEL% NEQ 0 (
  ECHO Ce script doit etre execute en tant qu'administrateur !
- GOTO QUIT
+ GOTO quit
 )
 
 :: Save the current Code Page and activate West European CP1252 (included french)
@@ -34,7 +34,7 @@ FOR /F %%I IN ('DIR "%~dp0\bonjour*" /B /S 2^> NUL') DO (
 IF "%bonjour%"=="" (
  ECHO Le service Bonjour n'a pas ete trouve.
  ECHO Copier le MSI correspondant dans le dossier de ce script.
- GOTO QUIT
+ GOTO quit
 )
 
 ECHO Post-installation de Windows 7
@@ -66,10 +66,10 @@ ECHO Pare-feu autorise Bureau a distance ...
 
 
 ECHO Fin de post-installation !
-GOTO QUIT
+GOTO quit
 
 
-:QUIT
+:quit
 CHCP %CP% > NUL
 ECHO.
 ECHO Appuyer sur une touche pour quitter ...
