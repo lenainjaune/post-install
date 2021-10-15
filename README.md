@@ -50,8 +50,6 @@ ECHO Pare-feu autorise Bureau a distance ...
 ECHO Fin de post-installation !
 GOTO QUIT
 
-
-
 :QUIT
 CHCP %CP% > NUL
 ECHO.
