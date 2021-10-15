@@ -39,8 +39,8 @@ IF "%bonjour%"=="" (
 
 ECHO Post-installation de Windows 7
 
-START /WAIT msiexec /i %bonjour% /qn
-ECHO Service bonjour installe (ping *.local possible) ...
+START /WAIT msiexec /i "%bonjour%" /qn
+ECHO Service Bonjour installe (ping *.local possible) ...
 
 :: Enable access to Terminal Server (RDP)
 REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"^
