@@ -39,6 +39,7 @@ IF "%bonjour%"=="" (
 
 ECHO Post-installation de Windows 7
 
+ECHO Installation du service Bonjour ...
 START /WAIT msiexec /i "%bonjour%" /qn
 ECHO Service Bonjour installe (ping *.local possible) ...
 
@@ -74,4 +75,5 @@ ECHO.
 ECHO Appuyer sur une touche pour quitter ...
 PAUSE > NUL
 ECHO ON
-EXIT /B```
+EXIT /B
+```
