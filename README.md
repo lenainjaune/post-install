@@ -77,3 +77,27 @@ PAUSE > NUL
 ECHO ON
 EXIT /B
 ```
+
+## Réduire partition système
+Pour mémoire avant de construire correctement
+``` batch
+:: Reduce Windows before backing up or deploying
+
+:: To show us how the system disk space is used : windirstat
+
+:: Windows Update
+:: https://social.technet.microsoft.com/Forums/ie/en-US/d1816c14-f953-4068-b3f0-e49558fe0845/datastoreedb-file
+net stop wuauserv
+:: delete all files inside the C:\Windows\SoftwareDistribution\Download directory 
+:: try "rd /S /Q C:\Windows\SoftwareDistribution\Download" alone or after "del C:\Windows\SoftwareDistribution\Download\*.* /s"
+:: delete the DataStore.edb into C:\Windows\SoftwareDistribution\DataStore
+:: idem
+:: "net start wuauserv" or completely disable windows update
+
+
+:: Delete others stuff
+rd /s /q c:\Recovery
+rd /s /q c:\Drivers
+rd /s /q c:\Hotfix
+rd /s /q c:\Perflogs**
+```
