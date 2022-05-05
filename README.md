@@ -1,6 +1,8 @@
 # post-install
 Scripts à exécuter une fois le système installé
 
+Fusionner aussi avec KB #65
+
 ## Windows 7
 post-install_win7.bat
 ``` batch
